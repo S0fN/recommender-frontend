@@ -27,7 +27,7 @@ const GeminiChat = ({ maxMemory = 10, placeholder = "Type a message..." }) => {
     setInput("");
 
     try {
-      const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
+      const model = genAI.getGenerativeModel({ model: "gemini-2.5-pro" });
       const prompt = newMessages.map((msg) => `${msg.role}: ${msg.content}`).join("\n");
       
       const result = await model.generateContent(prompt);
